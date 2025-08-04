@@ -844,14 +844,22 @@
     
     // Initial render call to start the app
     document.addEventListener('DOMContentLoaded', () => {
-        if (state.user) {
+        if (auth.currentUser) {
             router.navigate('match');
         } else {
             router.navigate('login');
         }
-        renderCreateProfilePage();
-        // Since profile and settings pages are dynamic, we need to ensure their render functions are called when navigated to.
     });
+
+    // We need to call renderCreateProfilePage when the page is navigated to, not on DOM load.
+    // The render function is responsible for this now.
+    window.addEventListener('hashchange', () => {
+        const hash = window.location.hash.substring(1);
+        if (hash === 'create-profile') {
+            renderCreateProfilePage();
+        }
+    });
+
   </script>
 </body>
 </html>
