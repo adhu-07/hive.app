@@ -67,35 +67,8 @@
             <div class="animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-blue-500"></div>
         </div>
 
-        <!-- Referral Page -->
-        <div id="referral-page" class="page w-full h-full flex flex-col items-center justify-center p-8 bg-gradient-to-br from-blue-500 to-blue-700 text-white">
-            <h1 class="text-4xl font-extrabold mb-4">Hive</h1>
-            <p class="text-xl font-light mb-8 text-center">Find your next campus connection</p>
-            <form id="referral-form" class="w-full max-w-xs space-y-6">
-                <input id="referral-code-input" type="text" placeholder="Enter Referral Code" class="w-full p-4 rounded-xl bg-white text-gray-900 placeholder-gray-500 shadow-md focus:outline-none focus:ring-4 focus:ring-blue-300 transition-all" required>
-                <button type="submit" class="w-full p-4 text-lg font-bold bg-white text-blue-600 rounded-xl shadow-lg hover:bg-gray-100 transform hover:scale-105 transition-all">
-                    Enter Hive
-                </button>
-            </form>
-            <p id="referral-error" class="mt-4 text-red-300 hidden">Invalid referral code. Please try again.</p>
-        </div>
-
-        <!-- Welcome/Login Choice Page -->
-        <div id="welcome-page" class="page hidden w-full h-full flex flex-col items-center justify-center p-8 bg-gradient-to-br from-blue-500 to-blue-700 text-white">
-            <h1 class="text-4xl font-extrabold mb-4">Welcome to the Hive!</h1>
-            <p class="text-xl font-light mb-8 text-center">Ready to find your honey? Log in or create an account!</p>
-            <div class="w-full max-w-xs space-y-4">
-                <button id="go-to-login-btn" class="w-full p-4 text-lg font-bold bg-white text-blue-600 rounded-xl shadow-lg hover:bg-gray-100 transform hover:scale-105 transition-all">
-                    Log In
-                </button>
-                <button id="go-to-signup-btn" class="w-full p-4 text-lg font-bold bg-blue-600 text-white rounded-xl shadow-lg hover:bg-blue-700 transform hover:scale-105 transition-all">
-                    Create Account
-                </button>
-            </div>
-        </div>
-
         <!-- Login Page -->
-        <div id="login-page" class="page hidden w-full h-full flex flex-col items-center justify-center p-8 bg-gradient-to-br from-blue-500 to-blue-700 text-white">
+        <div id="login-page" class="page w-full h-full flex flex-col items-center justify-center p-8 bg-gradient-to-br from-blue-500 to-blue-700 text-white">
             <h1 class="text-4xl font-extrabold mb-4">Welcome Back!</h1>
             <p class="text-xl font-light mb-8 text-center">Log in to continue your journey</p>
             <form id="login-form" class="w-full max-w-xs space-y-4">
@@ -111,6 +84,36 @@
                 <hr class="flex-grow border-white/30">
             </div>
             <button id="google-login-btn" class="google-button w-full max-w-xs flex items-center justify-center p-3 bg-white text-gray-700 rounded-xl font-semibold hover:bg-gray-100">
+                <svg class="w-6 h-6 mr-3" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M24 10.375C27.9719 10.375 31.3912 11.9056 33.8239 14.1843L37.7958 10.2125C34.2575 7.15375 29.5938 5.625 24 5.625C15.65 5.625 8.58375 10.2225 5.125 17.1512L10.385 20.8419C11.3981 18.0656 12.9862 15.6737 15.0869 13.9237C17.1875 12.1737 19.6737 10.9631 22.4287 10.375H24Z" fill="#EA4335"/>
+                    <path d="M42.2778 24.3637C42.2778 22.8462 42.1262 21.3287 41.8369 19.8637H24V27.5362H35.0894C34.8219 29.2312 33.9187 30.7387 32.7487 31.8487C31.5787 32.9587 30.1387 33.815 28.5375 34.2869L33.7975 37.9775C36.75 35.155 38.625 31.4287 39.5137 27.2437C40.4025 23.0587 40.8562 18.665 40.8562 14.2662L41.8369 10.2125L42.2778 24.3637Z" fill="#4285F4"/>
+                    <path d="M24 39.375C17.1537 39.375 11.3819 35.2156 8.58375 29.3512L13.8437 25.6606C15.0137 26.7706 16.4537 27.6269 18.055 28.0987C19.6562 28.5706 21.325 28.8187 23.0337 28.8187C25.7887 28.8187 28.275 27.6081 30.3756 25.8581C32.4762 24.1081 34.0644 21.7162 35.0775 18.94L40.3375 22.6306C37.8938 27.7669 34.3562 31.9262 29.5938 34.985C27.1612 37.2637 24.0337 38.805 20.865 39.375H24Z" fill="#FBBC05"/>
+                    <path d="M5.125 17.1512L10.385 20.8419C11.3981 18.0656 12.9862 15.6737 15.0869 13.9237C17.1875 12.1737 19.6737 10.9631 22.4287 10.375H24V5.625H22.4287C15.65 5.625 9.87812 9.78438 7.125 15.6487C6.11187 18.425 4.52375 20.8169 2.42313 22.5669C0.3225 24.3169 -2.16312 25.5275 -4.91812 26.115V26.1269C-4.04187 29.9887 -3.39187 34.2056 -3.07625 38.3906L2.18375 34.7006C2.95125 32.9594 3.71875 31.2181 4.545 29.4769L5.125 17.1512Z" fill="#34A853"/>
+                    <path d="M22.4287 10.375H24V5.625H22.4287C15.65 5.625 9.87812 9.78438 7.125 15.6487C6.11187 18.425 4.52375 20.8169 2.42313 22.5669C0.3225 24.3169 -2.16312 25.5275 -4.91812 26.115V26.1269L2.18375 34.7006C2.95125 32.9594 3.71875 31.2181 4.545 29.4769L5.125 17.1512Z" fill="#000000" opacity="0"/>
+                    <path d="M24 10.375C27.9719 10.375 31.3912 11.9056 33.8239 14.1843L37.7958 10.2125C34.2575 7.15375 29.5938 5.625 24 5.625C15.65 5.625 8.58375 10.2225 5.125 17.1512L10.385 20.8419C11.3981 18.0656 12.9862 15.6737 15.0869 13.9237C17.1875 12.1737 19.6737 10.9631 22.4287 10.375Z" fill="#000000" opacity="0"/>
+                </svg>
+                Sign in with Google
+            </button>
+            <p id="login-error" class="mt-4 text-red-300 hidden"></p>
+        </div>
+
+        <!-- Signup Page -->
+        <div id="signup-page" class="page hidden w-full h-full flex flex-col items-center justify-center p-8 bg-gradient-to-br from-blue-500 to-blue-700 text-white">
+            <h1 class="text-4xl font-extrabold mb-4">Create Your Account</h1>
+            <p class="text-xl font-light mb-8 text-center">Join the Hive community</p>
+            <form id="signup-form" class="w-full max-w-xs space-y-4">
+                <input type="email" id="signup-email" placeholder="Email" class="w-full p-4 rounded-xl bg-white text-gray-900 placeholder-gray-500 shadow-md focus:outline-none focus:ring-4 focus:ring-blue-300" required>
+                <input type="password" id="signup-password" placeholder="Password" class="w-full p-4 rounded-xl bg-white text-gray-900 placeholder-gray-500 shadow-md focus:outline-none focus:ring-4 focus:ring-blue-300" required>
+                <button type="submit" class="w-full p-4 text-lg font-bold bg-white text-blue-600 rounded-xl shadow-lg hover:bg-gray-100 transform hover:scale-105 transition-all">
+                    Sign Up
+                </button>
+            </form>
+            <div class="my-6 w-full max-w-xs flex items-center">
+                <hr class="flex-grow border-white/30">
+                <span class="px-2 text-white/70 text-sm">OR</span>
+                <hr class="flex-grow border-white/30">
+            </div>
+            <button id="google-signup-btn" class="google-button w-full max-w-xs flex items-center justify-center p-3 bg-white text-gray-700 rounded-xl font-semibold hover:bg-gray-100">
                 <svg class="w-6 h-6 mr-3" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M24 10.375C27.9719 10.375 31.3912 11.9056 33.8239 14.1843L37.7958 10.2125C34.2575 7.15375 29.5938 5.625 24 5.625C15.65 5.625 8.58375 10.2225 5.125 17.1512L10.385 20.8419C11.3981 18.0656 12.9862 15.6737 15.0869 13.9237C17.1875 12.1737 19.6737 10.9631 22.4287 10.375H24Z" fill="#EA4335"/>
                     <path d="M42.2778 24.3637C42.2778 22.8462 42.1262 21.3287 41.8369 19.8637H24V27.5362H35.0894C34.8219 29.2312 33.9187 30.7387 32.7487 31.8487C31.5787 32.9587 30.1387 33.815 28.5375 34.2869L33.7975 37.9775C36.75 35.155 38.625 31.4287 39.5137 27.2437C40.4025 23.0587 40.8562 18.665 40.8562 14.2662L41.8369 10.2125L42.2778 24.3637Z" fill="#4285F4"/>
@@ -414,12 +417,6 @@
                 auth = getAuth(app);
                 db = getFirestore(app);
                 storage = getStorage(app);
-
-                const referralCodeRef = doc(db, `artifacts/${appId}/public/data/referral-codes`, initialReferralCode);
-                const referralDoc = await getDoc(referralCodeRef);
-                if (!referralDoc.exists()) {
-                    await setDoc(referralCodeRef, { initial: true });
-                }
                 
                 onAuthStateChanged(auth, async (user) => {
                     showLoading(true);
@@ -449,10 +446,10 @@
                             showPage(detailsPage, null);
                         }
                     } else {
-                        console.log('No user is authenticated. Showing referral page.');
+                        console.log('No user is authenticated. Showing login page.');
                         userId = null;
                         appNav.classList.add('hidden');
-                        showPage(referralPage, null);
+                        showPage(loginPage, null);
                     }
                     showLoading(false);
                 });
@@ -735,28 +732,6 @@
 
         // --- Event Listeners and On-page Navigations ---
         
-        referralForm.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            const code = referralCodeInput.value;
-            
-            showLoading(true);
-            try {
-                const referralCodesRef = doc(db, `artifacts/${appId}/public/data/referral-codes`, code);
-                const referralDoc = await getDoc(referralCodesRef);
-                
-                if (referralDoc.exists()) {
-                    showPage(welcomePage, null);
-                } else {
-                    referralError.classList.remove('hidden');
-                }
-            } catch (error) {
-                console.error("Referral check error:", error);
-                showModal("An error occurred. Please try again.");
-            } finally {
-                showLoading(false);
-            }
-        });
-
         goToLoginBtn.addEventListener('click', () => showPage(loginPage, null));
         goToSignupBtn.addEventListener('click', () => showPage(signupPage, null));
         
@@ -941,4 +916,4 @@
         });
     </script>
 </body>
-</ht
+</html>
