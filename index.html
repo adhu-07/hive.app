@@ -48,10 +48,8 @@
 </head>
 <body class="bg-sky-50 text-gray-800 antialiased overflow-hidden">
 
-  <!-- Main App Container -->
   <div id="app-container" class="relative w-full h-screen flex flex-col justify-between">
 
-    <!-- Header/Navigation -->
     <header id="app-header" class="hidden justify-around items-center p-4 bg-white shadow-sm z-50">
       <button onclick="router.navigate('profile')" id="nav-profile" class="p-3 rounded-full text-gray-400 hover:bg-gray-200 transition-colors duration-200">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
@@ -64,22 +62,18 @@
       </button>
     </header>
 
-    <!-- Main content area -->
     <main id="main-content" class="flex-1 overflow-auto flex flex-col items-center justify-center p-4">
       
-      <!-- Loading Screen -->
       <div id="loading-page" class="page-container flex-col items-center justify-center h-full w-full">
         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-loader-2 text-sky-500 animate-spin-slow h-12 w-12"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>
       </div>
 
-      <!-- Login Screen -->
       <div id="login-page" class="page-container flex-col items-center justify-center h-full w-full">
         <div class="p-8 text-center bg-white rounded-xl shadow-lg border border-sky-100 max-w-sm w-full">
           <h1 class="text-3xl font-bold text-sky-600 mb-4">🐝 Hive</h1>
           <p class="text-gray-600 mb-6">Where Words Spark Connection</p>
           <div id="login-error" class="text-red-500 text-sm mb-4 hidden"></div>
 
-          <!-- Email/Password Form -->
           <form id="email-login-form" class="space-y-4 mb-6">
             <input type="email" id="email-input" placeholder="Email" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500" required />
             <input type="password" id="password-input" placeholder="Password" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500" required />
@@ -94,7 +88,6 @@
             <div class="flex-grow border-t border-gray-300"></div>
           </div>
 
-          <!-- Google Sign-in Button -->
           <button id="google-login-button" class="w-full px-6 py-3 bg-white text-gray-600 font-semibold rounded-full shadow-md hover:bg-gray-100 transition-colors duration-200 border border-gray-300 flex items-center justify-center">
             <img src="https://www.gstatic.com/images/branding/product/2x/gsa_48dp.png" alt="Google logo" class="h-6 w-6 mr-2">
             Sign in with Google
@@ -102,7 +95,6 @@
         </div>
       </div>
 
-      <!-- Profile Creation Screen -->
       <div id="create-profile-page" class="page-container flex-col items-center h-full w-full overflow-y-auto">
         <div class="w-full max-w-md bg-white p-8 rounded-xl shadow-lg border border-sky-100 my-8">
           <h2 class="text-2xl font-bold text-center text-sky-600 mb-6">Create Your Hive Profile</h2>
@@ -136,11 +128,9 @@
         </div>
       </div>
 
-      <!-- Match Swiping Screen -->
       <div id="match-page" class="page-container flex-col items-center justify-center h-full w-full">
         <div id="match-card-container" class="relative w-full max-w-sm h-[60vh] flex justify-center items-center">
-            <!-- Cards populated by JS -->
-        </div>
+            </div>
         <div id="match-buttons" class="flex space-x-8 mt-8 hidden">
           <button id="pass-button" class="bg-gray-200 text-gray-500 p-4 rounded-full shadow-lg transition-transform duration-300 hover:scale-110">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
@@ -155,33 +145,26 @@
         </div>
       </div>
 
-      <!-- Matches List Screen -->
       <div id="matches-page" class="page-container flex-col items-center w-full h-full">
         <h2 class="text-2xl font-bold text-center text-sky-600 mt-4">Your Matches</h2>
         <ul id="matches-list" class="w-full max-w-md divide-y divide-gray-200 mt-4 overflow-y-auto">
-          <!-- Matches populated by JS -->
-        </ul>
+          </ul>
         <div id="no-matches-found" class="flex flex-col items-center justify-center h-full text-center text-gray-600 p-6 hidden">
           <p class="text-xl font-semibold">No matches yet!</p>
           <p class="mt-2">Start swiping to find new connections.</p>
         </div>
       </div>
 
-      <!-- Profile View Screen -->
       <div id="profile-page" class="page-container flex-col items-center h-full w-full overflow-y-auto">
         <div id="profile-details-container" class="flex flex-col items-center p-6 bg-white rounded-xl shadow-lg m-4 border border-sky-100 w-full max-w-md">
-          <!-- Profile details populated by JS -->
-        </div>
+          </div>
       </div>
 
-      <!-- Settings Screen -->
       <div id="settings-page" class="page-container flex-col items-center h-full w-full overflow-y-auto">
         <div id="settings-container" class="flex flex-col items-center p-6 bg-white rounded-xl shadow-lg m-4 border border-sky-100 w-full max-w-md">
-          <!-- Settings content populated by JS -->
-        </div>
+          </div>
       </div>
 
-      <!-- Chat Screen -->
       <div id="chat-page" class="page-container flex-col justify-between w-full h-full">
         <div id="chat-header" class="flex items-center justify-between p-4 bg-sky-500 text-white shadow-lg">
           <button id="chat-back-button" class="text-white text-xl p-2 rounded-full hover:bg-sky-600 transition-colors duration-200">&larr;</button>
@@ -189,8 +172,7 @@
           <div class="w-10"></div>
         </div>
         <div id="chat-messages" class="flex-1 overflow-y-auto p-4 space-y-4">
-          <!-- Messages populated by JS -->
-        </div>
+          </div>
         <div id="chat-input-area" class="p-4 bg-white flex flex-col shadow-inner">
           <div class="flex items-center">
             <input type="text" id="chat-input" class="flex-1 p-3 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-sky-500" placeholder="Type a message..." />
@@ -201,7 +183,6 @@
         </div>
       </div>
 
-      <!-- Custom Modal -->
       <div id="custom-modal-backdrop" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[100] p-4 hidden">
         <div id="custom-modal" class="bg-white rounded-xl shadow-2xl p-6 w-full max-w-sm text-center">
           <h3 id="modal-title" class="text-xl font-bold text-gray-900 mb-2"></h3>
@@ -216,15 +197,14 @@
     </main>
   </div>
 
-  <!-- Firebase SDKs -->
   <script src="https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js"></script>
   
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
-    import { getAuth, onAuthStateChanged, signOut, createUserWithEmailAndPassword, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
-    import { getFirestore, collection, doc, setDoc, getDoc, onSnapshot, query, where, addDoc, serverTimestamp, runTransaction, deleteDoc } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+    import { getAuth, onAuthStateChanged, signOut, createUserWithEmailAndPassword, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, deleteUser } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+    import { getFirestore, collection, doc, setDoc, getDoc, onSnapshot, query, where, addDoc, serverTimestamp, runTransaction, deleteDoc, FieldValue } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
 
     // --- Global State and Router ---
     const state = {
@@ -252,7 +232,21 @@
       const activePage = document.getElementById(state.currentView + '-page');
       if (activePage) {
         activePage.classList.add('active');
-        if (state.currentView !== 'login' && state.currentView !== 'create-profile') {
+        if (state.currentView === 'create-profile') {
+          renderCreateProfilePage();
+        } else if (state.currentView === 'match') {
+          renderMatchPage();
+        } else if (state.currentView === 'matches') {
+          renderMatchesPage();
+        } else if (state.currentView === 'profile') {
+          renderProfilePage();
+        } else if (state.currentView === 'settings') {
+          renderSettingsPage();
+        } else if (state.currentView === 'chat') {
+          renderChatPage();
+        }
+
+        if (state.currentView !== 'login' && state.currentView !== 'create-profile' && state.currentView !== 'loading') {
           document.getElementById('app-header').classList.remove('hidden');
           document.querySelectorAll('#app-header button').forEach(btn => {
             btn.classList.remove('bg-sky-100', 'text-sky-600');
@@ -293,20 +287,20 @@
       unsubscribeProfile = onSnapshot(profileRef, (docSnap) => {
         if (docSnap.exists()) {
           state.profile = docSnap.data();
-          renderProfilePage();
-          renderSettingsPage();
+          if (state.currentView === 'profile') renderProfilePage();
+          if (state.currentView === 'settings') renderSettingsPage();
         }
       });
       const matchesRef = collection(db, `artifacts/${appId}/users/${uid}/matches`);
       unsubscribeMatches = onSnapshot(matchesRef, (snapshot) => {
         state.matches = snapshot.docs.map(d => ({ id: d.id, ...d.data() }));
-        renderMatchesPage();
+        if (state.currentView === 'matches') renderMatchesPage();
       });
       const publicProfilesRef = collection(db, `artifacts/${appId}/public/data/profiles`);
       unsubscribePotentialMatches = onSnapshot(publicProfilesRef, (snapshot) => {
         const allProfiles = snapshot.docs.map(doc => ({ uid: doc.id, ...doc.data() }));
         state.potentialMatches = allProfiles.filter(p => p.uid !== uid && !state.matches.some(m => m.matchId === p.uid));
-        renderMatchPage();
+        if (state.currentView === 'match') renderMatchPage();
       });
     };
 
@@ -351,8 +345,11 @@
       modal.message.textContent = message;
       modal.confirmBtn.onclick = onConfirm;
       modal.cancelBtn.onclick = onCancel || (() => modal.backdrop.classList.add('hidden'));
-      modal.confirmBtn.classList.remove('hidden');
-      if (!onConfirm) modal.confirmBtn.classList.add('hidden');
+      if (onConfirm) {
+        modal.confirmBtn.classList.remove('hidden');
+      } else {
+        modal.confirmBtn.classList.add('hidden');
+      }
       modal.backdrop.classList.remove('hidden');
     };
 
@@ -368,7 +365,6 @@
     const renderCreateProfilePage = () => {
       const profileStarterSelect = document.getElementById('profile-starter-select');
       const profileStarterText = document.getElementById('profile-starter-text');
-      // Clear existing options
       profileStarterSelect.innerHTML = '<option value="">Select a Conversation Starter</option>';
       conversationStarters.forEach(starter => {
           const option = document.createElement('option');
@@ -536,7 +532,6 @@
           li.onclick = () => {
             state.activeChat = match;
             router.navigate('chat');
-            renderChatPage();
           };
           li.innerHTML = `
             <div class="flex-1">
@@ -623,7 +618,7 @@
         </div>
       `;
       document.getElementById('edit-mode-button').onclick = () => renderEditSettingsPage();
-      document.getElementById('logout-button').onclick = async () => { await signOut(auth); window.location.reload(); };
+      document.getElementById('logout-button').onclick = async () => { await signOut(auth); };
       document.getElementById('delete-account-button').onclick = () => showModal('Delete Account?', 'This action is permanent and will remove all your data. Are you sure?', handleDeleteAccount, () => modal.backdrop.classList.add('hidden'));
     };
 
@@ -737,10 +732,17 @@
     };
 
     const handleDeleteAccount = async () => {
+      const user = auth.currentUser;
+      if (!user) {
+        showModal("Error", "You must be logged in to delete your account.");
+        return;
+      }
       try {
-        await deleteDoc(doc(db, `artifacts/${appId}/public/data/profiles/${state.user.uid}`));
-        await deleteDoc(doc(db, `artifacts/${appId}/users/${state.user.uid}/profiles/my-profile`));
-        await signOut(auth);
+        await deleteDoc(doc(db, `artifacts/${appId}/public/data/profiles/${user.uid}`));
+        await deleteDoc(doc(db, `artifacts/${appId}/users/${user.uid}/profiles/my-profile`));
+        // Also need to delete user data in other collections like 'likes' and 'matches'
+        // For this example, we'll focus on the main profile data.
+        await deleteUser(user);
         window.location.reload();
       } catch (e) {
         console.error("Error deleting account:", e);
@@ -755,10 +757,12 @@
       document.getElementById('chat-match-name').textContent = state.activeChat.name;
       const chatMessagesContainer = document.getElementById('chat-messages');
       chatMessagesContainer.innerHTML = '';
+
+      if (unsubscribeChat) unsubscribeChat();
       
       const chatCollectionRef = collection(db, `artifacts/${appId}/users/${state.user.uid}/matches/${state.activeChat.id}/messages`);
       unsubscribeChat = onSnapshot(chatCollectionRef, (snapshot) => {
-        const messages = snapshot.docs.map(doc => doc.data()).sort((a,b) => a.timestamp - b.timestamp);
+        const messages = snapshot.docs.map(doc => ({...doc.data(), id: doc.id})).sort((a,b) => (a.timestamp?.toDate() || 0) - (b.timestamp?.toDate() || 0));
         chatMessagesContainer.innerHTML = '';
         messages.forEach(msg => {
           const div = document.createElement('div');
@@ -843,23 +847,13 @@
     });
     
     // Initial render call to start the app
-    document.addEventListener('DOMContentLoaded', () => {
-        if (auth.currentUser) {
-            router.navigate('match');
-        } else {
-            router.navigate('login');
-        }
-    });
+    // This is now handled exclusively by onAuthStateChanged
+    // The hashchange listener is also no longer needed as rendering is centralized
+    // and managed by the router.
 
-    // We need to call renderCreateProfilePage when the page is navigated to, not on DOM load.
-    // The render function is responsible for this now.
-    window.addEventListener('hashchange', () => {
-        const hash = window.location.hash.substring(1);
-        if (hash === 'create-profile') {
-            renderCreateProfilePage();
-        }
+    document.getElementById('profile-bio').addEventListener('input', (e) => {
+      document.getElementById('bio-count').textContent = `${e.target.value.length}/300`;
     });
-
   </script>
 </body>
 </html>
