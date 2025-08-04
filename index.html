@@ -94,6 +94,9 @@
                 </svg>
                 Sign in with Google
             </button>
+            <button id="go-to-signup-from-login-btn" class="mt-4 text-white text-sm font-semibold opacity-70 hover:opacity-100 transition-opacity">
+                Don't have an account? Sign Up
+            </button>
             <p id="login-error" class="mt-4 text-red-300 hidden"></p>
         </div>
 
@@ -342,8 +345,6 @@
         };
         const appId = firebaseConfig.projectId; // Use the projectId as a unique app ID
         
-        const initialReferralCode = '1234567890';
-        
         let db;
         let auth;
         let storage;
@@ -357,17 +358,12 @@
         const availableInterests = ['Coding', 'Hiking', 'Coffee', 'Music', 'Robotics', 'Gaming', 'Reading', 'Painting', 'Psychology', 'Basketball', 'Cooking', 'Entrepreneurship', 'Art', 'History'];
 
         const loadingOverlay = document.getElementById('loading-overlay');
-        const referralPage = document.getElementById('referral-page');
-        const welcomePage = document.getElementById('welcome-page');
         const loginPage = document.getElementById('login-page');
         const signupPage = document.getElementById('signup-page');
         const detailsPage = document.getElementById('details-page');
         const homePage = document.getElementById('home-page');
         const messagesPage = document.getElementById('messages-page');
         const profilePage = document.getElementById('profile-page');
-        const referralForm = document.getElementById('referral-form');
-        const referralCodeInput = document.getElementById('referral-code-input');
-        const referralError = document.getElementById('referral-error');
         const goToLoginBtn = document.getElementById('go-to-login-btn');
         const goToSignupBtn = document.getElementById('go-to-signup-btn');
         const loginForm = document.getElementById('login-form');
@@ -385,7 +381,6 @@
         const navMessagesBtn = document.getElementById('nav-messages');
         const navProfileBtn = document.getElementById('nav-profile');
         const interestsContainer = document.getElementById('interests-container');
-        const copyReferralBtn = document.getElementById('copy-referral-btn');
         const photoInputs = document.querySelectorAll('.photo-input');
         const photoPreviews = document.querySelectorAll('.photo-preview');
         const photoError = document.getElementById('photo-error');
